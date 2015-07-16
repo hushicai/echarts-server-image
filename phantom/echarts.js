@@ -38,6 +38,6 @@ function onPageEvaluate(data) {
     data = data.replace(/^data:image\/png;base64,/, '');
     var dataBuffer = new Buffer(data, 'base64');
     require('fs').writeFileSync(outfile, dataBuffer, 'base64');
-    console.log('save to `%s`', outfile);
+    console.log('saved to `%s`', outfile);
     phantomInstance.exit();
 }
